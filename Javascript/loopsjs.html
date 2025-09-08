@@ -1,0 +1,33 @@
+<html>
+
+<head>
+
+    <title>Javascript</title>
+
+
+
+</head>
+
+
+<body>
+
+    <div id="tweetdiv"></div>
+
+<script type="text/Javascript">
+
+var tweets = ["Its too " + "fucking " + "boring! ", "Dont go for it."];
+
+var tweetstring = "";
+
+for (i = 0; i < tweets.length; i++ ) {
+tweetstring = tweetstring + "<p>" + tweets[i] + "<p>";
+}
+
+document.getElementById("tweetdiv").innerHTML = tweetstring;
+   
+</script>
+
+</body>
+
+
+</html>

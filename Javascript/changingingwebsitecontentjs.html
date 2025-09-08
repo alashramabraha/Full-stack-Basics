@@ -1,0 +1,44 @@
+<html>
+
+<head>
+
+    <title>Javascript</title>
+
+
+</head>
+
+
+<body>
+
+<p id="text">Text before clickme button</p>
+
+<button id="btn">Click me</button>
+
+<p id="text2">studying javascript is ____</p>
+
+<button id="btn2">whoever clicks this is a bastard</button>
+
+<p id="empty"></p>
+
+<button id="btn3">You're unbelievable</button>
+
+<script type="text/Javascript">
+
+document.getElementById('btn').onclick = function () {
+    document.getElementById('text').innerHTML = "text changed";
+    
+}
+
+document.getElementById('btn2').onclick = function () {
+document.getElementById('text2').innerHTML =   document.getElementById('text2').innerHTML + "boring"  
+}
+
+document.getElementById('btn3').onclick = function () {
+document.getElementById('empty').innerHTML = "Told you there is nothing in Javascript"
+}
+</script>
+
+</body>
+
+
+</html>

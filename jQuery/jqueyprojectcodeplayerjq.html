@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JQuery</title>
+
+<!-- ✅ Include jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+#header {
+    background-color: #EEE;
+    height: 30px;
+    padding: 2px;
+}
+#logo {
+    font-weight: bold;
+    float: left;
+    padding: 5px;
+}
+#buttonContainer {
+    width: 300px;
+    margin: 0 auto;
+}
+.toggleButton {
+    background-color: #CCC;
+    float: left;
+    padding: 5px;
+    border: 1px solid #AAA;
+}
+.toggleButton:hover {
+    cursor: default;
+}
+#output { border-top-right-radius: 5px; border-bottom-right-radius: 5px; }
+#html { border-top-left-radius: 5px; border-bottom-left-radius: 5px; }
+.active { background-color: paleturquoise; }
+.highlightedButton { background-color: aliceblue; }
+.hidden { display: none; }
+.panel { float: left; }
+iframe { border: none; }
+textarea { border-top: none; }
+</style>
+</head>
+
+<body>
+
+<div id="header">
+    <div id="logo">CodePlayer</div>
+    <div id="buttonContainer">
+        <div class="toggleButton active" id="html">HTML</div>
+        <div class="toggleButton" id="css">CSS</div>
+        <div class="toggleButton" id="javascript">JavaScript</div>
+        <div class="toggleButton active" id="output">Output</div>
+    </div>
+</div>
+
+<div id="bodyContainer">
+    <textarea class="panel" id="htmlPanel">Hello World</textarea>
+    <textarea class="panel hidden" id="cssPanel">p { color: red; }</textarea>
+    <textarea class="panel hidden" id="javascriptPanel">alert("Hello World");</textarea>
+    <iframe class="panel" id="outputPanel"></iframe>
+</div>
+
+<script>
+$(".toggleButton").hover(
+    function () { $(this).addClass("highlightedButton"); },
+    function () { $(this).removeClass("highlightedButton"); }
+);
+
+$(".toggleButton").click(function () {
+    $(this).toggleClass("active");
+    $(this).removeClass("highlightedButton");
+});
+
+// Resize panels
+$(".panel").height($(window).height() - $("#header").height() - 15);
+$(".panel").width($(window).width() / 2 - 10);
+
+// Function to update iframe output
+function updateOutput() {
+    let html = $("#htmlPanel").val();
+    let css = "<style>" + $("#cssPanel").val() + "</style>";
+    let js = "<script>" + $("#javascriptPanel").val() + "<\/script>";
+
+    let iframeDoc = $("#outputPanel").contents().find("html");
+    iframeDoc.html("<html><head>" + css + "</head><body>" + html + js + "</body></html>");
+}
+
+// Update output on typing
+$("textarea").on("change keyup paste", updateOutput);
+
+// Initial load
+updateOutput();
+</script>
+
+</body>
+</html>

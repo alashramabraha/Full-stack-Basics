@@ -1,0 +1,34 @@
+<html>
+
+<head>
+
+    <title>Javascript</title>
+
+
+
+</head>
+
+
+<body>
+
+<input type="text" id="inputvalue">
+
+<button id="btn">Enter</button>
+
+<p id="text">This is some text</p>
+
+
+<script type="text/Javascript">
+
+document.getElementById('btn').onclick = function () {
+    var textEntered = "";
+    textEntered = document.getElementById('inputvalue').value;
+    document.getElementById('text').innerHTML = textEntered;
+}
+
+</script>
+
+</body>
+
+
+</html>

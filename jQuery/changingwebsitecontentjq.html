@@ -1,0 +1,58 @@
+<html>
+
+<head>
+
+<title>JQuery</title>
+
+<script type="text/Javascript" src="Untitled-1.js"></script>
+
+<style>
+
+#circle {
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    margin: 10px;
+    border-radius: 50%;
+
+}
+
+#square {
+    width: 150px;
+    height: 150px;
+    background-color: green;
+    margin: 10px;
+    
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div id="circle"></div>
+
+<p id="text">This is some text...</p>
+
+    <script type="text/Javascript">
+
+$("#circle").hover(function () {
+   $("#text").html("The text has been changed!");
+});
+
+$("#btn").click(function () {
+   $("div").attr("id", "square");
+});
+
+
+    </script>
+
+
+
+</body>
+
+
+</html>

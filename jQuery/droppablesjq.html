@@ -1,0 +1,57 @@
+
+<html>
+    
+<head>
+    
+
+<title>JQuery</title>
+
+
+
+<script type="text/Javascript" src="./Jquery_files/Untitled-1.js"></script>
+
+<script type="text/Javascript" src="jquery-ui-1.14.1/jquery-ui-1.14.1/jquery-ui.js"></script>
+
+<link rel="stylesheet" type="text/css" href="jquery-ui-1.14.1/jquery-ui-1.14.1/jquery-ui.css">
+
+<style type="text/css">
+
+#draggable {
+    width: 150px;
+    height: 100px;
+    background-color: #CCC;
+}
+
+#droppable {
+width: 400px;
+height: 400px;
+background-color: beige;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<div id="draggable">I'm to be dragged</div>
+
+<div id="droppable">Get over here</div>
+
+<script type="text/Javascript">
+
+$("#draggable").draggable();
+
+$("#droppable").droppable({
+    drop: function () {
+        alert("Fatality!");
+    }
+});
+
+
+</script>
+
+</body>
+
+</html>

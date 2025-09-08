@@ -1,0 +1,44 @@
+<html>
+
+<head>
+
+    <title>Javascript</title>
+
+
+    <style>
+        #tweetdiv {
+            color: blue;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: yellow;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+    <div id="tweetdiv"></div>
+
+
+<script type="text/Javascript">
+
+var tweets = ["Javascript " + "is way " + "too fucking " + "boring!"];
+
+var tweetstring = "";
+
+var i = 0;
+
+while (i < tweets.length) {
+    tweetstring = tweetstring + "<h4>" + tweets[i] + "<h4>";
+i++
+}
+
+document.getElementById("tweetdiv").innerHTML = tweetstring;
+
+</script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,54 @@
+
+<html>
+    
+<head>
+    
+
+<title>JQuery</title>
+
+
+
+<script type="text/Javascript" src="./Jquery_files/Untitled-1.js"></script>
+
+<script type="text/Javascript" src="jquery-ui-1.14.1/jquery-ui-1.14.1/jquery-ui.js"></script>
+
+<link rel="stylesheet" type="text/css" href="jquery-ui-1.14.1/jquery-ui-1.14.1/jquery-ui.css">
+
+<style type="text/css">
+
+#resizable {
+    width: 150px;
+    height: 100px;
+    background-color: #CCC;
+}
+
+#also {
+width: 150px;
+height: 100px;
+background-color: beige;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<div id="resizable">Resizable</div>
+
+<div id="also">I will resize with my friend!</div>
+
+</div>
+
+<script type="text/Javascript">
+
+$("#resizable").resizable({
+    alsoResize: "#also"
+});
+
+</script>
+
+</body>
+
+</html>

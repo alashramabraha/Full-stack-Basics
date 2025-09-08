@@ -1,0 +1,41 @@
+<html>
+
+<head>
+
+    <title>Javascript</title>
+
+
+
+</head>
+
+
+<body>
+
+<p>What is 2+2?</p>
+
+<input type="text" id="inputvalue">
+
+<button id="btn">Enter</button>
+
+<script type="text/Javascript">
+
+    document.getElementById("btn").onclick = function() {
+    var rightanswer = "4";
+
+    var wronganswer = document.getElementById("inputvalue").value;
+
+    if (rightanswer == wronganswer) {
+alert("You got it");
+    } else {
+alert("No, try again!");
+    }
+}
+
+
+
+</script>
+
+</body>
+
+
+</html>

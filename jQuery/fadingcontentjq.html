@@ -1,0 +1,68 @@
+<html>
+
+<head>
+
+<title>JQuery</title>
+
+<script type="text/Javascript" src="Untitled-1.js"></script>
+
+<style>
+
+#circle {
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    margin: 10px;
+    border-radius: 50%;
+
+}
+
+#circle, .square:hover {
+    cursor: pointer;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<p id="text">Text effect</p>
+
+<div id="circle"></div>
+
+<button id="show">Show</button>
+
+<button id="hide">Hide</button>
+
+<button id="toggle">Toggle</button>
+
+
+    <script type="text/Javascript">
+
+$("#circle").click(function () {
+    $(this).fadeOut(1000);
+})
+
+$("#hide").click(function () {
+$("#text").hide("slow");
+})
+
+$("#show").click(function () {
+$("#text").fadeIn(1000);
+})
+
+$("#toggle").click(function () {
+$("#text").slideToggle(1000);
+})
+
+
+    </script>
+
+
+
+</body>
+
+
+</html>
